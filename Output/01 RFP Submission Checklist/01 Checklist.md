@@ -14,12 +14,12 @@ Source: `Source/01 PART III - Appendix A_Checklist of Tender Submission_amend.do
 
 ## Volume I — Summary of Proposal
 
-| No. | Status | PIC | Document | Source / Notes |
-| --- | --- | --- | --- | --- |
-| 1 | [ ] | Management Team | Covering letter | Summarise the overall proposal and include a list of all documents that comprise the offer submission. |
-| 2 | [ ] | Management Team | Checklist of RFP Submission | Appendix A of Part III. |
-| 3 | [ ] | Management Team | Form of RFP | Appendix B of Part III. |
-| 4 | [ ] | Management Team | Part II — Pre-requisite to RFP | Include completed prerequisite response. |
+| No. | Status | PIC | Document | Template / Source File | Source / Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [ ] | Management Team | Covering letter | Prepare new document | Summarise the overall proposal and include a list of all documents that comprise the offer submission. |
+| 2 | [ ] | Management Team | Checklist of RFP Submission | `Source/01 PART III - Appendix A_Checklist of Tender Submission_amend.docx` | Appendix A of Part III. |
+| 3 | [ ] | Management Team | Form of RFP | `Source/02 PART III - Appendix B_Form of RFP (BIG).docx` | Appendix B of Part III. |
+| 4 | [ ] | Management Team | Part II — Pre-requisite to RFP | `Source/Part II - Pre-requisite to RFP.xlsx` | Include completed prerequisite response. |
 
 ### Covering Letter Required Confirmation
 
@@ -29,42 +29,42 @@ Source: `Source/01 PART III - Appendix A_Checklist of Tender Submission_amend.do
 
 ## Volume II — Commercial Proposal
 
-| No. | Status | PIC | Document | Source / Notes |
-| --- | --- | --- | --- | --- |
-| 1 | [ ] | Management Team | Statement of Compliance for Terms and Conditions of Agreement | Appendix D1 if fully compliant, or Appendix D2 if exceptions are proposed. |
-| 2 | [ ] | Management Team | Proposer's Company Profile | Appendix F1 of Part III. |
-| 3 | [ ] | Management Team | Summary of Proposer's Financial Strength | Appendix F2 per checklist; source file available as Appendix F3. Verify numbering before submission. |
-| 4 | [ ] | Management Team | Digital Certified True Copy document of Company Profile | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
-| 5 | [ ] | Management Team | Attestation of Company Good Standing | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
-| 6 | [ ] | Management Team | Financial comparison for latest minimum three years from RFP float date | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
-| 7 | [ ] | Management Team | Audited Company Annual Reports or accepted financial-standing alternatives | Include proposer and parent company, if any, for 2025, 2024, 2023, and 2022; alternatives may include audited management accounts, company income tax statements, or similar proof of financial standing. |
-| 8 | [ ] | Management Team | Bank Facility Letter | Include if used as financial support evidence. |
-| 9 | [ ] | Management Team | Letter of Funding & Investor Support or Term Sheet | Include where applicable or used as alternative financial evidence. |
-| 10 | [ ] | Management Team | Non-Disclosure Agreement | Appendix G of Part III. |
-| 11 | [ ] | Management Team | Declaration of Independency and RPT/RRPT status | Appendix H of Part III. |
-| 12 | [ ] | Management Team | Principal's Warranty for each relevant component | Appendix I of Part III, if proposer is not the principal of the equipment. |
-| 13 | [ ] | Management Team | Letter of Undertaking for relevant components | Appendix J of Part III, if principal and/or supplier support is involved. |
-| 14 | [ ] | Management Team | Proposer OSH Management System Questionnaire | Appendix K of Part III, if applicable. |
-| 15 | [ ] | Management Team | Integrity Pledge by TM Business Partner | Appendix L of Part III. |
+| No. | Status | PIC | Document | Template / Source File | Source / Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [ ] | Management Team | Statement of Compliance for Terms and Conditions of Agreement | `Source/Appendix D1 to Contract T&Cs.pdf` or `Source/Appendix D2_Statement of non-compliance to TnC.xlsx` | Appendix D1 if fully compliant, or Appendix D2 if exceptions are proposed. |
+| 2 | [ ] | Management Team | Proposer's Company Profile | `Source/03 PART III - Appendix F1 - Company Profiles.docx` | Appendix F1 of Part III. |
+| 3 | [ ] | Management Team | Summary of Proposer's Financial Strength | `Source/04 PART III - Appendix F3 - Summary of Tenderer's Financial Strength.xlsx` | Appendix F2 per checklist; source file available as Appendix F3. Verify numbering before submission. |
+| 4 | [ ] | Management Team | Digital Certified True Copy document of Company Profile | SSM e-Info portal | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
+| 5 | [ ] | Management Team | Attestation of Company Good Standing | SSM e-Info portal | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
+| 6 | [ ] | Management Team | Financial comparison for latest minimum three years from RFP float date | SSM e-Info portal | From SSM e-Info portal; document date must be within three months before the RFP closing date. |
+| 7 | [ ] | Management Team | Audited Company Annual Reports or accepted financial-standing alternatives | Company audited accounts or accepted alternative evidence | Include proposer and parent company, if any, for 2025, 2024, 2023, and 2022; alternatives may include audited management accounts, company income tax statements, or similar proof of financial standing. |
+| 8 | [ ] | Management Team | Bank Facility Letter | Bank-issued facility letter, if used | Include if used as financial support evidence. |
+| 9 | [ ] | Management Team | Letter of Funding & Investor Support or Term Sheet | Investor/funder-issued letter or term sheet, if applicable | Include where applicable or used as alternative financial evidence. |
+| 10 | [ ] | Management Team | Non-Disclosure Agreement | `Source/05 PART III - Appendix G_Non Disclosure Agreement.docx` | Appendix G of Part III. |
+| 11 | [ ] | Management Team | Declaration of Independency and RPT/RRPT status | `Source/06 PART III - Appendix H_Declaration of Independency & RPT.docx` | Appendix H of Part III. |
+| 12 | [ ] | Management Team | Principal's Warranty for each relevant component | `Source/KIV_07 PART III - Appendix I_Principal's Warranty (BIG).docx` | Appendix I of Part III, if proposer is not the principal of the equipment. |
+| 13 | [ ] | Management Team | Letter of Undertaking for relevant components | `Source/08 PART III - Appendix J_LOU (BIG).docx` | Appendix J of Part III, if principal and/or supplier support is involved. |
+| 14 | [ ] | Management Team | Proposer OSH Management System Questionnaire | `Source/09 PART III - Appendix K_OSH Mgt. System Questionnaire (BIG).docx` | Appendix K of Part III, if applicable. |
+| 15 | [ ] | Management Team | Integrity Pledge by TM Business Partner | `Source/10 PART III - Appendix L_Integrity Pledge_BIG.pdf` | Appendix L of Part III. |
 
 ## Volume III — Technical Proposal
 
-| No. | Status | PIC | Document | Source / Notes |
-| --- | --- | --- | --- | --- |
-| 1 | [ ] | Technical Team | Statement of Compliance to Technical Specifications with related evidence | Microsoft Word document for Part V. |
-| 2 | [ ] | Technical Team | Appendix B.1 — Information Security Annexe | Part V ISA submission. |
-| 3 | [ ] | Technical Team | Addendum to Statement of Compliance | Microsoft Word document for Part V. |
-| 4 | [ ] | Technical Team | Completed BOQ in Part VI — Price Schedule without price | Ensure this technical copy excludes pricing. |
-| 5 | [ ] | Technical Team | Proposer's specifications and other necessary literature | Include supporting brochures, diagrams, architecture notes, evidence, and references where useful. |
+| No. | Status | PIC | Document | Template / Source File | Source / Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [ ] | Technical Team | Statement of Compliance to Technical Specifications with related evidence | `Source/BIG Programme_SOC.docx` | Microsoft Word document for Part V. |
+| 2 | [ ] | Technical Team | Appendix B.1 — Information Security Annexe | `Source/Appendix B.1 Information Security Annex.pdf` | Part V ISA submission. |
+| 3 | [ ] | Technical Team | Addendum to Statement of Compliance | `Source/BIG Programme_SOC Addendum.docx` | Microsoft Word document for Part V. |
+| 4 | [ ] | Technical Team | Completed BOQ in Part VI — Price Schedule without price | `Source/BIG 2.0 Programme_FALCON BOQ.xlsx` | Ensure this technical copy excludes pricing. |
+| 5 | [ ] | Technical Team | Proposer's specifications and other necessary literature | Prepare new supporting documents from solution design | Include supporting brochures, diagrams, architecture notes, evidence, and references where useful. |
 
 ## Phase 2 — Price Submission
 
 Submit only when TM officially requests Phase 2 price submission.
 
-| No. | Status | PIC | Document | Source / Notes |
-| --- | --- | --- | --- | --- |
-| 1 | [ ] | Technical Team | Form of RFP | Appendix B of Part III, updated if required for final price submission. |
-| 2 | [ ] | Technical Team | Part VI — Price Schedule with price | Complete every schedule and detailed price breakdown required by Part VI. |
+| No. | Status | PIC | Document | Template / Source File | Source / Notes |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [ ] | Technical Team | Form of RFP | `Source/02 PART III - Appendix B_Form of RFP (BIG).docx` | Appendix B of Part III, updated if required for final price submission. |
+| 2 | [ ] | Technical Team | Part VI — Price Schedule with price | `Source/BIG 2.0 Programme_FALCON BOQ.xlsx` | Complete every schedule and detailed price breakdown required by Part VI. |
 
 ## Portal and Packaging Checks
 
