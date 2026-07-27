@@ -161,5 +161,6 @@ For tender compliance, checklist, proposal, and submission-pack tasks:
 | Path | Purpose | Status |
 | --- | --- | --- |
 | `Output/01 RFP Submission Checklist/01 Checklist.md` | Checklist covering Appendix A items, Part I submission mechanics, Phase 2 price submission, and quality checks. | Draft |
+| `Output/02 Project Overview/01 Project Overview.md` | Project summary covering the RFP context, solution objective, submission structure, key constraints, and verification notes. | Draft |
 
 Update this index whenever a new top-level output folder is created.
