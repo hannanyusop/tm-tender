@@ -32,4 +32,4 @@ This folder contains draft supporting literature for Volume III, item 5: Propose
 
 ## Last Updated
 
-2026-07-27
+2026-07-28

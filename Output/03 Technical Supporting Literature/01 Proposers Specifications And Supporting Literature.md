@@ -22,6 +22,7 @@ Draft status: Working draft for technical team review
 - Final submission should be exported to the format required by TM and cross-referenced from `Source/BIG Programme_SOC.docx`.
 - Replace all bracketed placeholders before submission.
 - Do not include priced BOQ details, commercial totals, rate cards, discounts, or other price information in this technical package.
+- Treat this document as supporting technical literature. Final contractual, acceptance, pricing, IP, and site commitments must be verified against the original tender documents and final negotiated agreement before signature.
 
 ## 1. Purpose Of This Supporting Literature
 
@@ -43,7 +44,39 @@ Primary outcome: Improve fibre infrastructure resilience through predictive anal
 
 The proposed platform combines geospatial intelligence, predictive analytics, alerting, dashboard visualisation, workflow orchestration, and resource planning into a single operational environment. For Year 1, the platform is designed to operate independently from TM production systems while preparing standard API interfaces for future integration if the POC and Pilot progress to subsequent phases.
 
+### 2.1 Plain-English Operating Concept
+
+At its heart, FALCON is an early-warning and preventive-operations platform for TM's fibre network. Instead of only repairing a fibre cable after damage occurs, the platform is intended to help TM identify dangerous activity early enough for operations teams to intervene before fibre service is disrupted.
+
+Example operating scenario:
+
+1. A sensor, camera, construction dataset, field report, or other source detects suspicious activity near a fibre route.
+2. FALCON combines that observation with TM-provided fibre topology, historical fault locations, and contextual data.
+3. An AI model, risk rule, or hybrid scoring method determines whether the location has a high probability of fibre damage.
+4. The platform displays the location on a heatmap and generates an alert.
+5. A preventive workflow automatically starts, such as verifying the activity, notifying the relevant team, and assigning field action.
+6. FALCON tracks the action until the risk is mitigated and the case is closed.
+7. The outcome becomes evidence for improving future prediction, threshold tuning, and operational response.
+
+Operational flow:
+
+```text
+Risk data -> detection -> prediction -> alert -> preventive action -> tracked mitigation -> learning loop
+```
+
+This means the proposal should not position FALCON as only an AI model, dashboard, or sensor deployment. It should be presented as an end-to-end operational platform that connects data acquisition, analytics, alerting, workflow, field mitigation, audit history, and continuous improvement.
+
 ## 3. Functional Specifications
+
+The platform must address three different operational risk families. Each risk family may require a different combination of data, detection mechanism, AI/rule logic, and workflow response.
+
+| Risk Family | Practical Detection / Prediction Approach | Preventive Operations Objective |
+| --- | --- | --- |
+| Construction and third-party activity | Combine fibre topology, route proximity, construction/roadwork signals, vibration or field-device signals where proposed, and historical construction-related fault patterns. | Detect risky activity near fibre routes, alert operations, verify site activity, and dispatch preventive intervention before damage occurs. |
+| Theft and vandalism | Combine historical hotspot analysis, route/location risk profiles, abnormal activity signals, motion/acoustic/visual verification where proposed, and incident timing patterns. | Identify high-risk locations, trigger verification and escalation, and support deterrent or field response before asset loss or service disruption. |
+| Rodents, pests, and wildlife | Combine historical animal-related fault records, environmental/geographic context, recurrence patterns, and route vulnerability indicators. | Identify repeat-risk locations and recommend preventive maintenance, protection, or inspection activities. |
+
+The proposer should justify the selected data, hardware, and AI approach for each risk family rather than assuming one sensor or one model can solve all three problems.
 
 | Capability | Proposed Specification | Supporting Evidence To Attach |
 | --- | --- | --- |
@@ -70,6 +103,20 @@ The proposed architecture consists of the following logical layers:
 | Application layer | Provides dashboards, heatmaps, alerting, workflow management, mitigation tracking, and reporting. | Web dashboard, notification service, task/workflow engine, report generator. |
 | Security and governance layer | Protects data, access, logs, configuration, and application delivery. | IAM/RBAC, encryption, audit logs, secrets management, vulnerability management, incident response. |
 | Integration layer | Exposes future integration points while maintaining standalone Year 1 operation. | REST APIs, event interfaces, OpenAPI documentation, adapter pattern. |
+
+### 4.1 End-To-End Platform Layers
+
+The solution should be described as a connected platform with these operating layers:
+
+| Layer | Purpose | Proposal Treatment |
+| --- | --- | --- |
+| Data acquisition | Capture TM-provided data, proposer-sourced external data, and optional field-device events. | Explain which inputs are required for each use case and which party provides each input. |
+| Data platform | Receive, validate, clean, transform, store, and govern data. | Show ingestion methods, ETL/ELT flow, quality checks, lineage, retention, and security boundaries. |
+| Predictive analytics | Score locations, classify risk drivers, estimate likelihood/severity, and explain recommendations. | Define AI/rule methodology, feature assumptions, metrics, explainability, and retraining approach. |
+| Visualisation | Give users operational visibility into heatmaps, routes, alerts, incidents, trends, device/platform health, and actions. | Provide dashboard screenshots or mock-ups and map layer descriptions. |
+| Preventive workflow | Convert high-risk findings into assigned, tracked, escalated, and auditable action. | Show the closed-loop workflow from detection to mitigation closure. |
+| Central operations | Manage distributed sites, alerts, configuration, performance, security, and health monitoring remotely. | Describe remote operations capability and confirm which FCAPS-style functions are included, if applicable. |
+| Future integration | Expose secure APIs for later TM ecosystem integration while keeping Year 1 standalone. | Provide API catalogue and future integration sequence diagrams. |
 
 Required architecture attachments:
 
@@ -238,6 +285,21 @@ The proposed operating workflow should convert data and model outputs into clear
 | 7. Track | Monitor progress until closure, including evidence and remarks. | Closure record and KPI history. |
 | 8. Learn | Feed closure outcomes and confirmed incidents back into the model improvement cycle. | Updated model features and performance report. |
 
+### 11.1 Preventive Workflow Detail
+
+When a risk is detected, the platform should do more than display a high-risk point on a map. It should create a closed-loop preventive workflow:
+
+- Verify the event or risk signal.
+- Notify the appropriate operations role or team.
+- Assign a preventive action.
+- Escalate if acknowledgement or response does not occur within the defined threshold.
+- Track mitigation progress.
+- Record field evidence, notes, timestamps, and supporting media where applicable.
+- Review and close the case.
+- Maintain an audit history for the full lifecycle.
+
+This workflow is central to the proposal because the operational value depends on whether predictions lead to timely preventive action, not only whether the AI model produces a score.
+
 ## 12. Project Delivery Literature
 
 Attach or cross-reference the following delivery documents:
@@ -252,6 +314,28 @@ Attach or cross-reference the following delivery documents:
 - [ ] Training and knowledge transfer plan.
 - [ ] Support and maintenance approach.
 - [ ] Risk register and mitigation plan.
+
+### 12.1 Proposed Year 1 Stage Logic
+
+The Year 1 delivery should be framed as a focused POC and Pilot, not a nationwide production rollout.
+
+| Stage | Purpose | Expected Demonstration |
+| --- | --- | --- |
+| POC | Prove that the concept works in a controlled, limited, or simulated environment. | Working data pipeline, prediction output, dashboard/heatmap, alerting, workflow initiation within the clarified POC threshold, remote monitoring, audit trail, and measurable model result. |
+| Pilot | Prove that the solution can operate in a more realistic field or operational context if TM approves progression after POC. | More representative data, operational workflow evidence, concurrent workflow handling, secure API documentation, field-operation feedback, KPI reporting, and scale-up readiness report. |
+| Future scale-up | Separate future decision after successful Year 1 validation. | Potential TM Cloud deployment, TM ecosystem integration, additional sites, wider coverage, and commercial rollout or managed-service model subject to TM decision and agreement. |
+
+TM may decide not to proceed beyond POC. The technical and commercial proposal should therefore keep POC deliverables independently meaningful and avoid assuming automatic Pilot or nationwide rollout.
+
+### 12.2 Scope Boundaries For Year 1
+
+The Year 1 proposal should make these boundaries explicit:
+
+- Year 1 is not a nationwide production deployment.
+- Year 1 is not a replacement for TM's OSS, NOC, GIS, or work-order platforms.
+- Year 1 should not depend on integration with existing TM production systems.
+- Year 1 does not require a fixed TM-mandated sensor technology; the proposer must justify the selected data and sensing approach.
+- Future commercial rollout, national coverage, TM Cloud onboarding, and deep TM-system integration require later TM decision and agreement.
 
 ## 13. Startup Team And Viability Evidence
 
@@ -290,11 +374,44 @@ Attach evidence relevant to innovation merit, predictive analytics capability, a
 | Screenshots | Product or prototype screenshots showing actual capability. | `[Insert filename]` |
 | Patent / IP evidence, if any | Patent certificates, filings, proprietary modules, or IP declaration. | `[Insert filename]` |
 
-## 15. Compliance Cross-Reference
+## 15. Proposal Strategy And Evaluation Logic
+
+TM is effectively evaluating whether the proposer can deliver a practical early-warning and preventive-operations capability, not only a technically interesting model. The technical proposal should answer these questions directly:
+
+| Evaluation Question | Proposal Response Required |
+| --- | --- |
+| Can the team genuinely detect the three threat categories? | Define the operational use cases, detection sources, confidence limits, and validation evidence for construction/third-party activity, theft/vandalism, and wildlife risk. |
+| Is there enough data or a realistic data acquisition plan? | Separate TM-provided post-award data from proposer-sourced external data, and explain data-gap mitigation. |
+| Can the model produce measurable and explainable results? | Provide metrics, test method, assumptions, explainability examples, and evidence references. |
+| Can alerts lead to useful preventive action? | Show workflow initiation, assignment, escalation, mitigation tracking, closure evidence, and audit history. |
+| Can the platform operate securely across sites? | Provide security architecture, access controls, logging, encryption, vulnerability management, and incident response. |
+| Can it later scale and integrate without being rebuilt? | Show containerised/cloud-native architecture, Kubernetes readiness, API-first design, and private-cloud portability. |
+| Can it be delivered within the critical limits? | Align project plan, staffing, BOQ assumptions, dependencies, and delivery scope with the 8-month window and RM1.8 million cap. |
+
+The proposal should balance:
+
+- Ambition: present an innovative, scalable national vision.
+- Practicality: define a Year 1 POC/Pilot that can be delivered within the tender constraints.
+- Evidence: ensure every major claim is measurable, testable, and backed by supporting documents.
+
+Recommended deep-dive sequence before final proposal writing:
+
+1. Define the three operational use cases.
+2. Decide what Year 1 must demonstrate.
+3. Determine available and required data.
+4. Evaluate sensing and data-source options.
+5. Design the end-to-end architecture.
+6. Define AI methodology and acceptance testing.
+7. Design alerts and preventive workflows.
+8. Build security and deployment strategy.
+9. Convert the solution into a project plan and BOQ.
+10. Map every requirement to proposal evidence.
+
+## 16. Compliance Cross-Reference
 
 | Part V Area | Supporting Literature Section | Evidence Status |
 | --- | --- | --- |
-| End-to-end architecture | Sections 4, 7, 9 | Draft; diagrams required. |
+| End-to-end architecture | Sections 4, 7, 9, 11 | Draft; diagrams required. |
 | Data readiness and governance | Section 5 | Draft; data assumptions to confirm. |
 | Data flow | Sections 4 and 5 | Draft; data flow diagram required. |
 | AI approach | Section 6 | Draft; model evidence required. |
@@ -304,10 +421,10 @@ Attach evidence relevant to innovation merit, predictive analytics capability, a
 | Project plan, Gantt, milestone, RACI, KPI | Section 12 | Draft; delivery documents required. |
 | Innovation merit | Section 14 | Draft; prototype/customer evidence required. |
 | Predictive analytics capability | Section 6 and Section 14 | Draft; validation metrics required. |
-| Technical fit and integration | Sections 4, 7, 9, 14 | Draft; HLD and screenshots required. |
+| Technical fit and integration | Sections 4, 7, 9, 14, 15 | Draft; HLD and screenshots required. |
 | Startup team and viability | Section 13 | Draft; CVs/certifications required. |
 
-## 16. Attachment Register
+## 17. Attachment Register
 
 | Ref | Attachment | Purpose | Status |
 | --- | --- | --- | --- |
@@ -324,7 +441,7 @@ Attach evidence relevant to innovation merit, predictive analytics capability, a
 | A11 | CVs And Certifications | Supports startup team and viability. | To attach |
 | A12 | Support, Maintenance, HA/DR, And Backup Note | Supports operational readiness. | To attach |
 
-## 17. Open Issues Before Submission
+## 18. Open Issues Before Submission
 
 - [ ] Confirm final solution name and product branding.
 - [ ] Confirm whether any hardware, sensor, IoT, DAS, connectivity, cloud, or data subscription component is proposed.
@@ -333,3 +450,10 @@ Attach evidence relevant to innovation merit, predictive analytics capability, a
 - [ ] Confirm no pricing information appears in this Volume III literature document or its attachments.
 - [ ] Cross-reference the final attachment names and page numbers into the Part V Statement of Compliance reference column.
 - [ ] Verify final wording against the original tender documents before submission.
+- [ ] Verify whether any contractual POC/Pilot model-score targets beyond the SOC's above-75% evidence requirement apply, including any 80% Pilot target.
+- [ ] Verify exact POC and Pilot site count, location, route length, state coverage, and monitoring area.
+- [ ] Verify whether FCAPS-style central operations language is required, optional, or only an interpretation of monitoring requirements.
+- [ ] Verify approved data transfer methods, including whether offline files, SCP, API, or other methods are permitted.
+- [ ] Verify final IP ownership and usage rights for newly developed software, AI models, outputs, training data, and project-generated assets.
+- [ ] Verify any eight-month versus twelve-month wording across the tender and agreement documents before committing to a schedule or support period.
+- [ ] Verify responsibilities for site approvals, installation, removal, reinstatement, and field-equipment support if hardware is proposed.
