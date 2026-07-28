@@ -163,5 +163,6 @@ For tender compliance, checklist, proposal, and submission-pack tasks:
 | `Output/01 RFP Submission Checklist/01 Checklist.md` | Checklist covering Appendix A items, Part I submission mechanics, Phase 2 price submission, and quality checks. | Draft |
 | `Output/02 Project Overview/01 Project Overview.md` | Project summary covering the RFP context, solution objective, submission structure, key constraints, and verification notes. | Draft |
 | `Output/03 Technical Supporting Literature/01 Proposers Specifications And Supporting Literature.md` | Draft Volume III supporting literature for proposer specifications, architecture, AI/data approach, security, evidence, and attachments. | Draft |
+| `Output/04 Solution Concept/01 FALCON Fibre Risk Intelligence Platform Concept.md` | Working solution concept for the FALCON preventive fibre-risk intelligence platform, including modules, IoT design, POC scope, and workshop decisions. | Draft |
 
 Update this index whenever a new top-level output folder is created.
